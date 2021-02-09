@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,13 +17,15 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyq-oS-TYY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <state key="normal" title="Torch"/>
                                 <connections>
                                     <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="9OR-Lz-6sf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pyq-oS-TYY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3SF-I9-90j"/>
                             <constraint firstItem="pyq-oS-TYY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="880-wT-Cno"/>
@@ -42,9 +43,4 @@
             <point key="canvasLocation" x="-1014" y="71"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

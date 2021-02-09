@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 class ViewController: UIViewController {
     
     var background = 0
@@ -16,23 +16,27 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
      
-        view.backgroundColor = .red
         super.viewDidLoad()
         
     }
 
     @IBAction func buttonPressed() {
     
-        background += 1
-        switch background {
-        case 1:
-            view.backgroundColor = .yellow
-        case 2:
-            view.backgroundColor = .green
-        default:
-            background = 0
-            view.backgroundColor = .red
+        let device = AVCaptureDevice.default(for: AVMediaType.video)
+        if ((device?.hasTorch) != nil) {
+            do {
+                try device?.lockForConfiguration()
+                device?.torchMode = device?.torchMode ==
+                    AVCaptureDevice.TorchMode.on ? .off : . on
+                device?.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
         }
-    }
+        }
+            }
+        
 
-    }
+
+
+
